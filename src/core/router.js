@@ -7,7 +7,7 @@ const { handleBookingStep } = require('../replies/booking');
 
 const FALLBACK_MESSAGE =
   "Hi! I'm here to help. You can ask me about:\n\n" +
-  '💰 *Prices* — type "prices" or "how much"\n' +
+ // '💰 *Prices* — type "prices" or "how much"\n' +
   '🎁 *Deals* — type "offers" or "deals"\n' +
   '📍 *Location* — type "where" or "branches"\n' +
   '📅 *Booking* — type "book" or "appointment"\n\n' +
@@ -23,8 +23,8 @@ async function routeMessage(userId, messageText, platform) {
   const intent = await detectIntent(messageText);
 
   switch (intent) {
-    case 'PRICE':
-      return getPricesReply();
+    // case 'PRICE':
+    //   return getPricesReply();
 
     case 'DEALS':
       return getDealsReply();
